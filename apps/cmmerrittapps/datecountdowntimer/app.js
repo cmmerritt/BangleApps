@@ -1,7 +1,7 @@
 // code can be tested by using the Bangle.js 2 watch emulator with the Espruino IDE: https://www.espruino.com/ide/ 
 
 // create proof of concept with static date
-// then take user input for targetDate
+// next steps in README
 
 const Layout = require("Layout");
 
