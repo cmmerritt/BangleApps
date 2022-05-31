@@ -1,0 +1,13 @@
+{ "id": "datecountdowntimer",
+  "name": "Date Countdown Timer",
+  "shortName" : "Date Countdown",
+  "icon": "app.png",
+  "description": "A timer that keeps track of days, hours, minutes, and seconds until a chosen date",
+  "tags": "timer",
+  "supports" : ["BANGLEJS2"],
+  "readme": "README.md",
+  "storage": [
+    {"name":"datecountdowntimer.app.js","url":"app.js"},
+    {"name":"datecountdowntimer.img","url":"app-icon.js","evaluate":true}
+  ]
+}
