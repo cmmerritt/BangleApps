@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../../css/spectre.min.css">
+  </head>
+
+  <body>
+    <h4>Your important date</h4>
+    <form id="add-date-form">
+      <input class="form-input input-sm" type="text" id="date-input" placeholder="Oct 31, 2022">
+      <button class ="btn btn-primary btn-sm" id="add-button">Add</button>
+      <button id="upload" class="btn btn-primary">Upload</button>
+    </form>
+
+    <script src="../../core/lib/customize.js"></script>
+
+    <script>
+
+      let $date = document.getElementById('date-input');
+      let $form = document.getElementById('add-date-form');
+
+      $form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        let date = $date.value;
+
+        const save = () => {
+          localStorage.setItem('date',JSON.stringify(date));
+        }
+
+        document.getElementById("upload").addEventListener("click", () => {
+          sendCustomizedApp({
+            storage:[
+              { name:"datetimecountdown.json", content:JSON.stringify(list)}
+            ]
+          });
+        });
+      })
+    </script>
+
+  </body>
+</html>

@@ -1,11 +1,18 @@
 // code can be tested by using the Bangle.js 2 watch emulator with the Espruino IDE: https://www.espruino.com/ide/ 
 
-// create proof of concept with static date
-// next steps in README
+// allow user to upload date to track
+
+let settings = require("Storage").readJSON('datetimecountdown.json',1);
+
+if(!settings) {
+  settings  = "Oct 31, 2022";
+}
 
 const Layout = require("Layout");
 
-const targetDate = "Oct 31, 2022";
+// const targetDate = "Oct 31, 2022";
+
+const targetDate = settings;
 
 const goalTime = new Date(targetDate).getTime();
 
