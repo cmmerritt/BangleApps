@@ -18,6 +18,8 @@ function displayCountDown() {
   const currentTime = new Date();
   
   let timeLeft = goalTime - currentTime;
+
+  timeLeft--;
   
   if(timeLeft < 0) {
     E.showMessage("It's Your Day!", "Countdown Timer");
@@ -46,4 +48,4 @@ function displayCountDown() {
   Bangle.setLCDPower(1);
 }
 
-displayCountDown();
+let interval = setInterval(displayCountDown, 1000);
